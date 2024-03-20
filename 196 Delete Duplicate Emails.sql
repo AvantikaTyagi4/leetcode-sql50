@@ -1,0 +1,2 @@
+DELETE FROM PERSON
+WHERE id NOT IN (SELECT min(id) FROM person GROUP BY email);
